@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+  imports = [ <home-manager/nixos> ];
 
   programs.zsh.enable = true;
 
