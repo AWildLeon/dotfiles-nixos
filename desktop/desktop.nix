@@ -29,7 +29,7 @@ in
     # fuse
     # appimage-run
     # rustdesk
-    
+
     netcat-gnu
     onlyoffice-bin
 
@@ -45,13 +45,18 @@ in
     zulu
   ];
 
-  
+  # services.teamviewer.enable = true;
+
   networking.networkmanager.enable = true;
   hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+
 
   # Yubikey
   services.pcscd.enable = true;
 
+  # Newer Kernel
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
 
   # Appimage
