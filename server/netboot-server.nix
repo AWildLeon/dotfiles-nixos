@@ -18,5 +18,6 @@
     perl
     xorriso
     xz
+    make
   ];
 }
