@@ -18,6 +18,6 @@
     perl
     xorriso
     xz
-    make
+    gnumake
   ];
 }
