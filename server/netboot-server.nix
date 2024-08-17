@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   services.tftpd.enable = true;
-  services.atftpd.root = "/srv/netboot";
+  services.tftpd.path = "/srv/netboot";
 
   services.nginx.enable = true;
 
