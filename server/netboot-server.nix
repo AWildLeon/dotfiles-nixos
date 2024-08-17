@@ -19,5 +19,6 @@
     xorriso
     xz
     gnumake
+    gcc
   ];
 }
