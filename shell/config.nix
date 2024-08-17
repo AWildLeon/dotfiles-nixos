@@ -20,6 +20,8 @@
       plugins = [
         "git"
         "sudo"
+        "docker"
+        "docker-compose"
       ];
     };
   };
