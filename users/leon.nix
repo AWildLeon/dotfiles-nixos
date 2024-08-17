@@ -74,7 +74,7 @@ in
   users.users.leon = {
     isNormalUser = true;
     description = "Leon Hubrich";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     shell = pkgs.zsh;
   };
 

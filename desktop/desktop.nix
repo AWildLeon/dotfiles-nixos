@@ -12,7 +12,9 @@ in
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-
+  # Better than virtual box!
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
 
   # Disable The firewall
   networking.firewall.enable = false;
@@ -22,8 +24,12 @@ in
   #   fuse
   # ];
 
-  nixpkgs.config.allowUnfree = true;
-
+  # Allow 32Bit Steam games to work
+  nixpkgs.config = {
+    allowUnfree = true;
+    allowUnsupportedSystem = true;
+    supportedSystems = [ "x86_64-linux" "i686-linux" ];
+  };
 
   environment.systemPackages = with pkgs; [
     # fuse
@@ -38,6 +44,8 @@ in
 
     libfido2
 
+    # Exfat Support
+    exfatprogs
 
     # Minecraft
     unstable.prismlauncher
