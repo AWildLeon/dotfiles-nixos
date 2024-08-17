@@ -20,5 +20,6 @@
     xz
     gnumake
     gcc
+    lzma
   ];
 }
