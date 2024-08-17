@@ -1,9 +1,9 @@
 { config, pkgs, ... }:
 {
   services.tftpd.enable = true;
-  services.atftpd.root = "/srv/netboot"
+  services.atftpd.root = "/srv/netboot";
 
-    services.nginx.enable = true;
+  services.nginx.enable = true;
 
   services.nginx.virtualHosts."netboot.int.onlh.de" = {
     root = "/srv/netboot";
