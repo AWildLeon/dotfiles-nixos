@@ -1,4 +1,8 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+let
+  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+in
+{
   # Shell
   programs.fastfetch.enable = true;
 
@@ -32,6 +36,7 @@
   # Prompt
   programs.oh-my-posh = {
     enable = true;
+    package = unstable.oh-my-posh;
     settings = builtins.fromJSON (builtins.unsafeDiscardStringContext (
     ''
       {
